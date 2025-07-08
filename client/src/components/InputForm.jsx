@@ -39,13 +39,25 @@ export const InputForm = () => {
         }
     };
     const handleSubmit = () => {
+        console.log("Submitting input:", input);
+
         if (!input.longUrl) {
             setIsError(true);
             setUrl("Please add a URL");
             return;
         }
+        let longUrl = input.longUrl.trim();
+    const urlCode = input.urlCode;
+
+    // ✅ Add https:// if missing
+    if (!/^https?:\/\//i.test(longUrl)) {
+        longUrl = "https://" + longUrl;
+    }
+
+    const correctedInput = { longUrl, urlCode };
+    console.log("Corrected input:", correctedInput);
         setIsloading(true);
-        axios.post('/api/url/shorten', input).then(res => {
+        axios.post('/api/url/shorten', correctedInput).then(res => {
             if (res.status) {
                 let data = res.data;
                 let createUrl = clientBaseUrl + data.urlCode;
