@@ -10,11 +10,7 @@ URL Shortener Web Application is a user-friendly web-based tool that allows user
 - Copy to Clipboard: Copy the shortened URL to the clipboard for easy sharing.
 - User-friendly Interface: Intuitive and responsive UI design for a seamless user experience.
 
-## Demo
-![URL Shortener Demo](https://github.com/Akshay-Singh-Rajput/MERN-Stack-URL-Shortener/assets/97354310/8e5a29d2-1477-486d-bd9c-b9292fe8d224)
 
-## Live Demo
-Try out the live demo of the URL Shortener Web Application [here](https://lightlink.vercel.app).
 
 ## Installation
 To run the URL Shortener Web Application locally, follow these steps:
